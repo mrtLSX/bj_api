@@ -54,6 +54,27 @@ server.post('/api/login', (req, res) => {
     });
   }
 });
+server.post('/api/userlogin', (req, res) => {
+  let CNO = req.body.CNO;
+  let PNO = req.body.PNO;
+  let password = req.body.Passwd;
+  let loginUser = data.user.find((item) => item.CNO == CNO && item.password == password && item.PNO== PNO);
+  // console.log(data.user);
+  if(loginUser) {
+    res.jsonp({
+      user: loginUser,
+      code: 1,
+      msg: '授权成功',
+      token: `absjlsdjflasjflsh&${loginUser.id}`
+    });
+  } 
+  else {
+    res.jsonp({
+      code: 0,
+      msg: '用户名或者密码错误'
+    });
+  }
+});
 
 // 验证码接口
 server.get('/api/code', (req,res)=>{
