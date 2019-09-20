@@ -14,3 +14,8 @@
 ## 接口文档地址
 
 转到接口文档的详细地址： [B&G项目api文档](https://malun666.github.io/bjsfaserver/#/)
+
+## 启动接口步骤
+npm install  或者 yarn install
+nodemon app.js 启动后台接口
+
