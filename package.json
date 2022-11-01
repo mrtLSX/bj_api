@@ -28,6 +28,6 @@
     "svg-captcha": "^1.4.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^4.0.2"
   }
 }
